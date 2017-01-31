@@ -16,6 +16,10 @@ Get the latest version [here](https://bitbucket.org/decalage/oledump-contrib/get
 
 ## New plugins 
 
+### ole_form
+
+Plugin extracting the strings present in user forms (usually used to hide variables in VBA)
+
 ### olevba plugin
 
 oledump plugin to run the [olevba](https://bitbucket.org/decalage/oletools/wiki/olevba) scanning engine.
