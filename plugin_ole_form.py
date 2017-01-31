@@ -34,8 +34,9 @@ class cOF(cPluginParent):
             stream = ExtendedStream(cStringIO.StringIO(self.stream), self.streamname)
             if self.streamname[-1] == 'f':
                 VARIABLES = list(consume_FormControl(stream))
-                for var in VARIABLES:
-                    result.append('name: {name}, tag: {tag}, id: {id}, type: {ClsidCacheIndex}'.format(**var))
+                if self.options == '-d':
+                    for var in VARIABLES:
+                        result.append('name: {name}, tag: {tag}, id: {id}, type: {ClsidCacheIndex}'.format(**var))
             else:
                 for var in VARIABLES:
                     if var['ClsidCacheIndex'] != 23:
